@@ -1,0 +1,55 @@
+.trust-bar {
+  width: 100%;
+  overflow: hidden;
+  background: #000000;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.trust-bar__track {
+  display: flex;
+  gap: 40px;
+  white-space: nowrap;
+  animation: scroll 30s linear infinite;
+  padding: 14px 0;
+}
+
+.trust-bar__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  /* Base white */
+  color: #ffffff;
+}
+
+/* Icons stay clean white */
+.trust-bar__icon {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* Gradient text (this is the sexy part) */
+.trust-bar__label {
+  font-family: var(--font-condensed);
+  font-weight: 600;
+
+  background: linear-gradient(135deg, #ffffff 0%, #93c5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
